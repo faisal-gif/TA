@@ -35,7 +35,7 @@ class TestimoniController extends Controller
         ]);
         $tambah->save();
   
-        return redirect('/formAlumni');
+        return redirect()->back()->with('success', 'Data telah tersimpan');
     }
 
     public function show(){

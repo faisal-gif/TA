@@ -22,6 +22,8 @@
 
   <link rel="stylesheet" href="{{asset('hom/css/flaticon.css')}}">
   <link rel="stylesheet" href="{{asset('hom/css/style.css')}}">
+
+  <link rel="shortcut icon" href="{{asset('images/logo_jti.png')}}" />
 </head>
 
 <body>
@@ -35,10 +37,10 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">Tentang Kami</a></li>
-          <li class="nav-item"><a href="/testimoni" class="nav-link">Alumni</a></li>
-          <li class="nav-item"><a href="/kabarr" class="nav-link">Artikel</a></li>
+          <li class="nav-item {{ request()->segment(1) == '/' ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item {{ (request()->segment(1) == 'about') ? 'active' : '' }}"><a href="/about" class="nav-link">Tentang Kami</a></li>
+          <li class="nav-item {{ request()->segment(1) == 'testimoni' ? 'active' : '' }}"><a href="/testimoni" class="nav-link">Alumni</a></li>
+          <li class="nav-item {{ request()->segment(1) == 'kabarr' ? 'active' : '' }}"><a href="/kabarr" class="nav-link">Artikel</a></li>
           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
         </ul>
       </div>

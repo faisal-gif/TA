@@ -123,7 +123,7 @@
 
             <a class="nav-link" data-toggle="collapse" href="#form-testimoni" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Kata Alumni</span>
+              <span class="menu-title">Kabar Jurusan</span>
               <i class="menu-arrow"></i>
             </a>
             @if(Gate::check('alumni') )

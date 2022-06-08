@@ -4,6 +4,7 @@
 <style>
 /* #selengkapnya {display: none;} */
 </style>
+
 <table class="table table-bordered table-hover table-responsive">
   <tr>
     <th style="width:50%;">Nama</th>
@@ -54,8 +55,6 @@
                           
                           </td>
                           <td>
-                          <!-- <a class="nav-link btn btn-info btn-sm" href="/show/{{$testim->id}}" >
-                            Detail -->
                             <button type="submit" class="nav-link btn btn-primary btn-sm" data-toggle="modal" data-target="#contohModal{{$testim->id}}">Detail</button>
                           </td>
                           <td>

@@ -1,6 +1,12 @@
 @extends('layouts.lay')
 @section('content')
 
+@if (\Session::has('success'))
+<div class="alert alert-success">
+    <strong>Data Tersimpan</strong> {!! \Session::get('success') !!}
+  </div>
+@endif
+
 @foreach($kabar as $k)
 <div class="col-lg-6 grid-margin stretch-card">
                   <div class="card mb-3">

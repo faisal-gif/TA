@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>StudyLab - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Tracer Study Politeknik Negeri Malang</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -22,6 +22,8 @@
 	
 	<link rel="stylesheet" href="{{asset('hom/css/flaticon.css')}}">
 	<link rel="stylesheet" href="{{asset('hom/css/style.css')}}">
+
+	<link rel="shortcut icon" href="{{asset('images/logo_jti.png')}}" />
 </head>
 <body>
 
@@ -34,11 +36,11 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-          		<li class="nav-item"><a href="/about" class="nav-link">Tentang Kami</a></li>
-          		<li class="nav-item"><a href="/testimoni" class="nav-link">Alumni</a></li>
-          		<li class="nav-item"><a href="/kabarr" class="nav-link">Artikel</a></li>
-          		<li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+				<li class="nav-item {{ request()->segment(1) == '/' ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item {{ (request()->segment(1) == 'about') ? 'active' : '' }}"><a href="/about" class="nav-link">Tentang Kami</a></li>
+          <li class="nav-item {{ request()->segment(1) == 'testimoni' ? 'active' : '' }}"><a href="/testimoni" class="nav-link">Alumni</a></li>
+          <li class="nav-item {{ request()->segment(1) == 'kabarr' ? 'active' : '' }}"><a href="/kabarr" class="nav-link">Artikel</a></li>
+          <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
 				</ul>
 			  </div>
 		</div>
@@ -46,7 +48,7 @@
 <!-- </form> -->
 	<!-- END nav -->
 	
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/polinema.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-end justify-content-center">

@@ -1,4 +1,4 @@
-@extends('layouts.testi')
+@extends('layouts.kabar')
 @section('content')
 @foreach($kabar as $kab)
         <div class="col-lg-4 ftco-animate">

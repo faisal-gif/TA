@@ -1,5 +1,12 @@
 @extends('layouts.lay')
 @section('content')
+
+@if (\Session::has('success'))
+<div class="alert alert-success">
+    <strong>Data Tersimpan</strong> {!! \Session::get('success') !!}
+  </div>
+@endif
+
 <div class="row">
 <div class="col-lg-12">
               <div class="card">
